@@ -1,0 +1,38 @@
+-> MySQL line command client
+-> password "root1234"
+-> create database control_de_stock; 	  //  Para crear una base de datos
+-> use control_de_stock;  	//   Para usar esta base de datos
+Para crear los campos de la tabla de datos
+-> create table producto (	// se crea la tabla "producto"
+-> id INT AUTO_INCREMENT,		// id se incrementa automaticamente
+-> nombre VARCHAR(50) NOT NULL,    //nombre  hasta 50 caracteres , no puede ser null.
+-> descripcion VARCHAR(255),		// descripcion hasta 255 caracteres
+-> cantidad INT NOT NULL DEAFAULT 0,  //  no puede ser null, por defecto 0 (cero).
+-> PRIMARY KEY(id)		// llave primaria id ( TIP: el ultimo campo no lleva coma )
+-> )Engine=InnoDB;  // indica que la tabla acepte transacciones dentro de una operacion.
+
+Ahora hay que insertar los productos en la tabla
+-> insert into producto(nombre, descripcion, cantidad) values ('Mesa', 'Mesa para 4', 10);
+-> insert into producto(nombre, descripcion, cantidad) values ('Celular', 'Marca LG', 50);
+-> select * from producto  //  imprime todos los datos de la tabla producto
+
+En Eclipse
+Crear proyecto Maven
+-> New  ->  Proyect  ->  Maven Proyect -> *Create a simple proyect -> 
+Group id: com.alura
+Artifact id: Control-deStock ->  ENTER
+En el proyecto creado ir a properties ->  Java Build Path -> 
+-- Cambir la version del JRE System Library a Workspace default JRE (jdk ...)
+-- Luego abrir el archivo pom.xml y hacer las configuraciones.
+Para conectarse a la base de datos se puede utilizar una librería que tiene los metodos de conexion mediante un archivo .jar o hacer la configuracion manual con "maven".
+
+JDBC :  java data base connection
+Abrir y cerrar una conexion utilizando la inferface Connection (JDBC)
+Con esta lib se deja la implementacion transparente independiente de la 
+base de datos elegida.
+Podria agregar el driver de sql server( en el archivo pom.xml en la tag
+<dependencies>) y me conectaria igual cambiando la url de conexion.
+
+
+
+

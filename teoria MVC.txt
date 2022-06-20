@@ -1,0 +1,28 @@
+
+ Una aplicación es escrita en capas.
+ Las capas más conocidas son las de view, controller, modelo y persistencia, 
+que componen el estándar MVC (Model View Controller). 
+
+ El flujo de una requisición entre las capas es el siguiente;
+ 
+  view <--> controller <--> persistencia
+  
+ 
+ -- MVC (Model View Controller)
+ Este modelo es un estándar de arquitectura de aplicación que ayuda a 
+dividir las responsabilidades de una aplicación. Estas responsabilidades 
+están divididas en las tres capas que recién conocimos. Este modelo tiene 
+como ventajas, más allá de la división de las responsabilidades, la 
+facilidad de mantenimiento, claridad y reutilización del código.
+
+ La view podría realizar la solicitud directamente a la base de datos, sin utilizar
+la clase Controller, pero eso no es una buena práctica, porque terminamos creando 
+una relación entre dos estructuras que tiene sus responsabilidades bien definidas. 
+ La vista( view ) debe mostrar la información devuelta por la base de datos y 
+ el DAO debe representar el modelo y realizar las operaciones que conecten la 
+ aplicación a la base de datos.
+ 
+ 
+ 
+ 
+ 

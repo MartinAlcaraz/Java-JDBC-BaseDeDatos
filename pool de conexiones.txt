@@ -1,0 +1,6 @@
+
+En un escenario donde múltiples clientes pueden acceder a una misma 
+aplicación simultáneamente se puede reutilizar un conjunto de conexiones 
+de tamaño fijo o dinámico.
+ Esta es la estrategia de mantener un pool de conexiones. Vamos a 
+abrir una cantidad específica de conexiones y reutilizarlas.

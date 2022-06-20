@@ -1,0 +1,19 @@
+
+	 Las consultas con statement, no son seguras por las query inyections.
+		 
+//		Connection conexion = new ConnectionFactory().conectar();
+//		java.sql.Statement statement = conexion.createStatement();		
+//		
+//		statement.execute("UPDATE PRODUCTO SET NOMBRE = '"+nombre+"'"
+//				+ ", DESCRIPCION = '" + descripcion + "', CANTIDAD = '" + cantidad +"'"
+//				 + "WHERE ID = " + id);
+//		return statement.getUpdateCount();
+		
+	Lo mas seguro es usar la preparedStatements
+		
+--------------------------------------------------
+--> try-with-resources:
+  Con try-with-resources no hay más la necesidad de explicitar el comando close 
+  para cerrar los recursos (PreparedStatement, Connection, Statement). 
+
+ 

@@ -1,0 +1,45 @@
+
+CLAVE FORANEA: es util cuando por ejemplo queremos en la tabla PRODUCTO 
+asignarle a un producto una categoriaque no existe en la tabla CATEGORIA. 
+
+Para crear una nueva tabla categorias y relacionarla con la tabla productos:
+
+Primero, la consola de MySQL, seleccionar la base de datos.
+
+> select control_de_stock; 
+
+Luego crear una tabla CATEGORIA con las columnas "id" y "nombre"
+
+> CREATE TABLE CATEGORIA(
+	id INT AUTO_INCREMENT, 
+	nombre VARCHAR(50) NOT NULL, 
+	PRIMARY KEY(id)
+	)Engine=InnoDB;
+	
+ Para comprobar que se creo:
+> select * from categoria;
+
+Crear las categorias insertando los valores en la tabla.
+
+> INSERT INTO CATEGORIA(NOMBRE) VALUES('Muebles','Tecnologia','Cocina','Zapatillas'); 
+
+Ahora hay que agregarle a la tabla producto la columna categoria
+
+> ALTER TABLE PRODUCTO ADD COLUMN CATEGORIA_ID INT;
+
+Ahora hay que relacionar las dos tablas, relacionando con la clave foranea 
+la columna categoria_id de la tabla PRODUCTO con la columna id de la tabla CATEGORIA
+
+> ALTER TABLE PRODUCTO ADD FOREIGN KEY (CATEGORIA_ID) REFERENCES CATEGORIA(ID);
+
+Lo siguiente es actualizar cada producto con la categoria correspondiente
+
+> UPDATE PRODUCTO SET CATEGORIA_ID = 1  WHERE ID = 1;
+
+ Para ver si ocurrieron los cambios hacer:
+ 
+ > select * from producto;
+
+
+
+ 
