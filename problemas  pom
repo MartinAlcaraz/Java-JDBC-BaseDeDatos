@@ -1,0 +1,13 @@
+
+<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				...
+
+si da error el proyecto o el archivo pom.xml hay q actualizar el proyecto 
+en el archivo pom.xml hacer:
+
+click derecho -> Maven-> Update proyect 
