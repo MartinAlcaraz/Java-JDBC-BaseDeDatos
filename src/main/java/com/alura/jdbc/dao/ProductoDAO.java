@@ -138,7 +138,7 @@ public class ProductoDAO {
 				statement.setInt(3, producto.getCantidad());
 				statement.setInt(4, producto.getId());
 				statement.execute();
-				return statement.getUpdateCount();
+				return statement.getUpdateCount(); // devuelve la cantidad de registros en la tabla
 			}
 		}catch(SQLException e) {
 			throw new RuntimeException(e);

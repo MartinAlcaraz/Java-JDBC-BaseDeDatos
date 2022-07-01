@@ -1,6 +1,6 @@
 
 CLAVE FORANEA: es util cuando por ejemplo queremos en la tabla PRODUCTO 
-asignarle a un producto una categoriaque no existe en la tabla CATEGORIA. 
+asignarle a un producto una categoria que no existe en la tabla CATEGORIA. 
 
 Para crear una nueva tabla categorias y relacionarla con la tabla productos:
 
